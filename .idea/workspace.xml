@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21888fc3-adce-48c1-9e85-3c611d3b6fc3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crontab.php" afterPath="$PROJECT_DIR$/crontab.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbConnector.php" afterPath="$PROJECT_DIR$/dbConnector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microfinanceUSSD.php" afterPath="$PROJECT_DIR$/microfinanceUSSD.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+    </list>
+    <ignored path="microfinance-ussd-app.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="microfinance-ussd-app" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="dbConnector.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbConnector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10605">
+              <caret line="707" column="9" selection-start-line="707" selection-start-column="9" selection-end-line="707" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="microfinanceUSSD.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microfinanceUSSD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="448" column="36" selection-start-line="448" selection-start-column="36" selection-end-line="448" selection-end-column="36" />
+              <folding>
+                <element signature="e#18536#26262#0#PHP" expanded="false" />
+                <marker date="1494338372000" expanded="true" signature="720:788" placeholder="select level... session_levels" />
+                <marker date="1494338372000" expanded="true" signature="962:1035" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="1123:1185" placeholder="INSERT INTO account... " />
+                <marker date="1494338372000" expanded="true" signature="1262:1340" placeholder="SELECT * FRO... microfinance" />
+                <marker date="1494338372000" expanded="true" signature="2021:2131" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494338372000" expanded="true" signature="2722:2832" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494338372000" expanded="true" signature="3421:3499" placeholder="SELECT * FRO... microfinance" />
+                <marker date="1494338372000" expanded="true" signature="3701:3774" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="5163:5237" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="5700:5773" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="6516:6621" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="7083:7188" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="7645:7750" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="8246:8319" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="9759:9832" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="11450:11523" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="13586:13659" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="14014:14088" placeholder="SELECT * FRO... account" />
+                <marker date="1494338372000" expanded="true" signature="14884:14969" placeholder="UPDATE accou... " />
+                <marker date="1494338372000" expanded="true" signature="15063:15149" placeholder="INSERT INTO account... " />
+                <marker date="1494338372000" expanded="true" signature="16634:16739" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="17216:17321" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="17796:17901" placeholder="INSERT INTO checkout... " />
+                <marker date="1494338372000" expanded="true" signature="18837:18949" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494338372000" expanded="true" signature="19078:19145" placeholder="INSERT INTO microfinance... " />
+                <marker date="1494338372000" expanded="true" signature="21764:21876" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494338372000" expanded="true" signature="22005:22073" placeholder="INSERT INTO microfinance... " />
+                <marker date="1494338372000" expanded="true" signature="22463:22561" placeholder="UPDATE micro... " />
+                <marker date="1494338372000" expanded="true" signature="22680:22753" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="23116:23218" placeholder="UPDATE micro... " />
+                <marker date="1494338372000" expanded="true" signature="23315:23388" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="23761:23860" placeholder="UPDATE micro... " />
+                <marker date="1494338372000" expanded="true" signature="24002:24075" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="24567:24667" placeholder="UPDATE micro... " />
+                <marker date="1494338372000" expanded="true" signature="24811:24884" placeholder="UPDATE `sess... " />
+                <marker date="1494338372000" expanded="true" signature="25310:25403" placeholder="UPDATE micro... " />
+                <marker date="1494338372000" expanded="true" signature="25494:25604" placeholder="INSERT INTO `session_levels`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crontab.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crontab.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+              <folding>
+                <marker date="1494336262000" expanded="true" signature="357:404" placeholder="select * fro... checkout" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="879">
+              <caret line="712" column="0" selection-start-line="712" selection-start-column="0" selection-end-line="712" selection-end-column="0" />
+              <folding>
+                <element signature="e#8219#8714#0#PHP" expanded="false" />
+                <element signature="e#8722#9218#0#PHP" expanded="false" />
+                <element signature="e#10060#11519#0#PHP" expanded="false" />
+                <element signature="e#11527#13133#0#PHP" expanded="false" />
+                <element signature="e#11900#13119#0#PHP" expanded="false" />
+                <element signature="e#12805#13119#0#PHP" expanded="false" />
+                <element signature="e#13360#13505#0#PHP" expanded="false" />
+                <element signature="e#13514#14732#0#PHP" expanded="false" />
+                <element signature="e#14419#14732#0#PHP" expanded="false" />
+                <element signature="e#14754#14981#0#PHP" expanded="false" />
+                <element signature="e#15005#17661#0#PHP" expanded="false" />
+                <element signature="e#15748#15869#0#PHP" expanded="false" />
+                <element signature="e#17666#19558#0#PHP" expanded="false" />
+                <marker date="1494332105000" expanded="true" signature="720:788" placeholder="select level... session_levels" />
+                <marker date="1494332105000" expanded="true" signature="959:1032" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="1120:1182" placeholder="INSERT INTO account... " />
+                <marker date="1494332105000" expanded="true" signature="1258:1336" placeholder="SELECT * FRO... microfinance" />
+                <marker date="1494332105000" expanded="true" signature="1995:2105" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494332105000" expanded="true" signature="2628:2738" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494332105000" expanded="true" signature="4131:4205" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="4468:4541" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="6235:6309" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="6581:6659" placeholder="SELECT * FRO... microfinance" />
+                <marker date="1494332105000" expanded="true" signature="6789:6862" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="7798:7871" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="8565:8670" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="9069:9174" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="9573:9678" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="10110:10183" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="11577:11650" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="13191:13264" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="15204:15277" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="15625:15699" placeholder="SELECT * FRO... account" />
+                <marker date="1494332105000" expanded="true" signature="16433:16518" placeholder="UPDATE accou... " />
+                <marker date="1494332105000" expanded="true" signature="16597:16683" placeholder="INSERT INTO account... " />
+                <marker date="1494332105000" expanded="true" signature="18101:18206" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="18628:18733" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="19155:19260" placeholder="INSERT INTO checkout... " />
+                <marker date="1494332105000" expanded="true" signature="20120:20232" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494332105000" expanded="true" signature="20349:20416" placeholder="INSERT INTO microfinance... " />
+                <marker date="1494332105000" expanded="true" signature="22749:22861" placeholder="INSERT INTO `session_levels`... " />
+                <marker date="1494332105000" expanded="true" signature="22978:23046" placeholder="INSERT INTO microfinance... " />
+                <marker date="1494332105000" expanded="true" signature="23395:23493" placeholder="UPDATE micro... " />
+                <marker date="1494332105000" expanded="true" signature="23594:23667" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="24002:24104" placeholder="UPDATE micro... " />
+                <marker date="1494332105000" expanded="true" signature="24201:24274" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="24605:24704" placeholder="UPDATE micro... " />
+                <marker date="1494332105000" expanded="true" signature="24801:24874" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="25219:25319" placeholder="UPDATE micro... " />
+                <marker date="1494332105000" expanded="true" signature="25418:25491" placeholder="UPDATE `sess... " />
+                <marker date="1494332105000" expanded="true" signature="25800:25893" placeholder="UPDATE micro... " />
+                <marker date="1494332105000" expanded="true" signature="25969:26079" placeholder="INSERT INTO `session_levels`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/dbConnector.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/crontab.php" />
+        <option value="$PROJECT_DIR$/microfinanceUSSD.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1464" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microfinance-ussd-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microfinance-ussd-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microfinance-ussd-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Sass" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21888fc3-adce-48c1-9e85-3c611d3b6fc3" name="Default" comment="" />
+      <created>1494313483717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1494313483717</updated>
+      <workItem from="1494313494961" duration="13803000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13803000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1464" height="1053" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16033755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/microfinanceUSSD.php</url>
+          <line>149</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dbConnector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10605">
+          <caret line="707" column="9" selection-start-line="707" selection-start-column="9" selection-end-line="707" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="712" column="0" selection-start-line="712" selection-start-column="0" selection-end-line="712" selection-end-column="0" />
+          <folding>
+            <element signature="e#8219#8714#0#PHP" expanded="false" />
+            <element signature="e#8722#9218#0#PHP" expanded="false" />
+            <element signature="e#10060#11519#0#PHP" expanded="false" />
+            <element signature="e#11527#13133#0#PHP" expanded="false" />
+            <element signature="e#11900#13119#0#PHP" expanded="false" />
+            <element signature="e#12805#13119#0#PHP" expanded="false" />
+            <element signature="e#13360#13505#0#PHP" expanded="false" />
+            <element signature="e#13514#14732#0#PHP" expanded="false" />
+            <element signature="e#14419#14732#0#PHP" expanded="false" />
+            <element signature="e#14754#14981#0#PHP" expanded="false" />
+            <element signature="e#15005#17661#0#PHP" expanded="false" />
+            <element signature="e#15748#15869#0#PHP" expanded="false" />
+            <element signature="e#17666#19558#0#PHP" expanded="false" />
+            <marker date="1494332105000" expanded="true" signature="720:788" placeholder="select level... session_levels" />
+            <marker date="1494332105000" expanded="true" signature="959:1032" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="1120:1182" placeholder="INSERT INTO account... " />
+            <marker date="1494332105000" expanded="true" signature="1258:1336" placeholder="SELECT * FRO... microfinance" />
+            <marker date="1494332105000" expanded="true" signature="1995:2105" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494332105000" expanded="true" signature="2628:2738" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494332105000" expanded="true" signature="4131:4205" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="4468:4541" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="6235:6309" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="6581:6659" placeholder="SELECT * FRO... microfinance" />
+            <marker date="1494332105000" expanded="true" signature="6789:6862" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="7798:7871" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="8565:8670" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="9069:9174" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="9573:9678" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="10110:10183" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="11577:11650" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="13191:13264" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="15204:15277" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="15625:15699" placeholder="SELECT * FRO... account" />
+            <marker date="1494332105000" expanded="true" signature="16433:16518" placeholder="UPDATE accou... " />
+            <marker date="1494332105000" expanded="true" signature="16597:16683" placeholder="INSERT INTO account... " />
+            <marker date="1494332105000" expanded="true" signature="18101:18206" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="18628:18733" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="19155:19260" placeholder="INSERT INTO checkout... " />
+            <marker date="1494332105000" expanded="true" signature="20120:20232" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494332105000" expanded="true" signature="20349:20416" placeholder="INSERT INTO microfinance... " />
+            <marker date="1494332105000" expanded="true" signature="22749:22861" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494332105000" expanded="true" signature="22978:23046" placeholder="INSERT INTO microfinance... " />
+            <marker date="1494332105000" expanded="true" signature="23395:23493" placeholder="UPDATE micro... " />
+            <marker date="1494332105000" expanded="true" signature="23594:23667" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="24002:24104" placeholder="UPDATE micro... " />
+            <marker date="1494332105000" expanded="true" signature="24201:24274" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="24605:24704" placeholder="UPDATE micro... " />
+            <marker date="1494332105000" expanded="true" signature="24801:24874" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="25219:25319" placeholder="UPDATE micro... " />
+            <marker date="1494332105000" expanded="true" signature="25418:25491" placeholder="UPDATE `sess... " />
+            <marker date="1494332105000" expanded="true" signature="25800:25893" placeholder="UPDATE micro... " />
+            <marker date="1494332105000" expanded="true" signature="25969:26079" placeholder="INSERT INTO `session_levels`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crontab.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <folding>
+            <marker date="1494336262000" expanded="true" signature="357:404" placeholder="select * fro... checkout" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microfinanceUSSD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="448" column="36" selection-start-line="448" selection-start-column="36" selection-end-line="448" selection-end-column="36" />
+          <folding>
+            <element signature="e#18536#26262#0#PHP" expanded="false" />
+            <marker date="1494338372000" expanded="true" signature="720:788" placeholder="select level... session_levels" />
+            <marker date="1494338372000" expanded="true" signature="962:1035" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="1123:1185" placeholder="INSERT INTO account... " />
+            <marker date="1494338372000" expanded="true" signature="1262:1340" placeholder="SELECT * FRO... microfinance" />
+            <marker date="1494338372000" expanded="true" signature="2021:2131" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494338372000" expanded="true" signature="2722:2832" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494338372000" expanded="true" signature="3421:3499" placeholder="SELECT * FRO... microfinance" />
+            <marker date="1494338372000" expanded="true" signature="3701:3774" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="5163:5237" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="5700:5773" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="6516:6621" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="7083:7188" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="7645:7750" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="8246:8319" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="9759:9832" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="11450:11523" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="13586:13659" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="14014:14088" placeholder="SELECT * FRO... account" />
+            <marker date="1494338372000" expanded="true" signature="14884:14969" placeholder="UPDATE accou... " />
+            <marker date="1494338372000" expanded="true" signature="15063:15149" placeholder="INSERT INTO account... " />
+            <marker date="1494338372000" expanded="true" signature="16634:16739" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="17216:17321" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="17796:17901" placeholder="INSERT INTO checkout... " />
+            <marker date="1494338372000" expanded="true" signature="18837:18949" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494338372000" expanded="true" signature="19078:19145" placeholder="INSERT INTO microfinance... " />
+            <marker date="1494338372000" expanded="true" signature="21764:21876" placeholder="INSERT INTO `session_levels`... " />
+            <marker date="1494338372000" expanded="true" signature="22005:22073" placeholder="INSERT INTO microfinance... " />
+            <marker date="1494338372000" expanded="true" signature="22463:22561" placeholder="UPDATE micro... " />
+            <marker date="1494338372000" expanded="true" signature="22680:22753" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="23116:23218" placeholder="UPDATE micro... " />
+            <marker date="1494338372000" expanded="true" signature="23315:23388" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="23761:23860" placeholder="UPDATE micro... " />
+            <marker date="1494338372000" expanded="true" signature="24002:24075" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="24567:24667" placeholder="UPDATE micro... " />
+            <marker date="1494338372000" expanded="true" signature="24811:24884" placeholder="UPDATE `sess... " />
+            <marker date="1494338372000" expanded="true" signature="25310:25403" placeholder="UPDATE micro... " />
+            <marker date="1494338372000" expanded="true" signature="25494:25604" placeholder="INSERT INTO `session_levels`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -3,7 +3,7 @@
 if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 	require_once('dbConnector.php');
 	require_once('AfricasTalkingGateway.php');
-	require_once('config.php');
+	//require_once('config.php');
 
 	//2. receive the POST from AT
 	$sessionId     =$_POST['sessionId'];
@@ -53,14 +53,9 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 			        	$db->query($sql9b);
 
 			        	//Serve our services menu
-						$response = "CON Welcome to Nerd Microfinance, " . $userAvailable['name']  . ". Choose a service.\n";
-						$response .= " 1. Please call me.\n";
-						$response .= " 2. Deposit Money\n";
-						$response .= " 3. Withdraw Money\n";
-						$response .= " 4. Send Money\n";							
-						$response .= " 5. Buy Airtime\n";
-						$response .= " 6. Repay Loan\n";
-						$response .= " 7. Account Balance\n";																							
+						$response = "CON Welcome to Yhub , " . $userAvailable['name']  . ". Choose a service.\n";
+						$response .= " 1. Account Balance\n";
+						$response .= " 2. Withdraw Money\n";																						
 
 			  			// Print the response onto the page so that our gateway can read it
 			  			header('Content-type: text/plain');
@@ -74,14 +69,9 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 			        	$db->query($sql9b);
 
 			        	//Serve our services menu
-						$response = "CON Welcome to Nerd Microfinance, " . $userAvailable['username']  . ". Choose a service.\n";
-						$response .= " 1. Please call me.\n";
-						$response .= " 2. Deposit\n";
-						$response .= " 3. Withdraw\n";
-						$response .= " 4. Send Money\n";							
-						$response .= " 5. Buy Airtime\n";
-						$response .= " 6. Repay Loan\n";
-						$response .= " 7. Account Balance\n";																							
+						$response = "CON Welcome to Yhub, " . $userAvailable['username']  . ". Choose a service.\n";
+						$response .= " 1. Account Balance\n";
+						$response .= " 2. WithDraw Cash\n";
 
 			  			// Print the response onto the page so that our gateway can read it
 			  			header('Content-type: text/plain');
@@ -89,46 +79,42 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 			        }
 			        break;			        
 			    case "1":
-			        if($level==1){
-			        	//9d. Call the user and bridge to a sales person
-			          	$response = "END Please wait while we place your call.\n";
+                    if($level==1){
+                        // Find the user in the db
+                        $sql7 = "SELECT * FROM microfinance WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
+                        $userQuery=$db->query($sql7);
+                        $userAvailable=$userQuery->fetch_assoc();
 
-			          	//Make a call
-			         	$from="+254711082300"; $to=$phoneNumber;
-			          	// Create a new instance of our awesome gateway class
-			          	$gateway = new AfricasTalkingGateway($username, $apikey);
-			          	try { $gateway->call($from, $to); }
-			          	catch ( AfricasTalkingGatewayException $e ){echo "Encountered an error when calling: ".$e->getMessage();}
+                        // Find the account
+                        $sql7a = "SELECT * FROM account WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
+                        $BalQuery=$db->query($sql7a);
+                        $newBal = 0.00;
+                        //$newLoan = 0.00;
 
-			  			// Print the response onto the page so that our gateway can read it
-			  			header('Content-type: text/plain');
- 			  			echo $response;	 
-			        }
+                        if($BalAvailable=$BalQuery->fetch_assoc()){
+                            $newBal = $BalAvailable['balance'];
+                            $newLoan = $BalAvailable['loan'];
+                        }
+                        //Respond with user Balance
+                        $response = "END Your account statement.\n";
+                        $response .= "Yhub .\n";
+                        $response .= "Name: ".$userAvailable['name']."\n";
+                       // $response .= "City: ".$userAvailable['city']."\n";
+                        $response .= "Balance: ".$newBal."ksh"."\n";
+                        //$response .= "Loan: ".$newLoan."\n";
+                        // Print the response onto the page so that our gateway can read it
+                        header('Content-type: text/plain');
+                        echo $response;
+                    }
 			        break;
+			   
 			    case "2":
-			    	if($level==1){
-			    		//9e. Ask how much and Launch the Mpesa Checkout to the user
-						$response = "CON How much are you depositing?\n";
-						$response .= " 1. 19 Shillings.\n";
-						$response .= " 2. 18 Shillings.\n";
-						$response .= " 3. 17 Shillings.\n";							
-
-						//Update sessions to level 9
-				    	$sqlLvl9="UPDATE `session_levels` SET `level`=9 where `session_id`='".$sessionId."'";
-				    	$db->query($sqlLvl9);
-
-			  			// Print the response onto the page so that our gateway can read it
-			  			header('Content-type: text/plain');
- 			  			echo $response;	 			    		
-			    	}
-			        break;	
-			    case "3":
 			    	if($level==1){
 			    		//9e. Ask how much and Launch B2C to the user
 						$response = "CON How much are you withdrawing?\n";
 						$response .= " 1. 15 Shillings.\n";
 						$response .= " 2. 16 Shillings.\n";
-						$response .= " 3. 17 Shillings.\n";							
+						$response .= " 3. 17 Shillings.\n";
 
 						//Update sessions to level 10
 				    	$sqlLvl10="UPDATE `session_levels` SET `level`=10 where `session_id`='".$sessionId."'";
@@ -137,129 +123,10 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 
 			  			// Print the response onto the page so that our gateway can read it
 			  			header('Content-type: text/plain');
- 			  			echo $response;	 			    		
-			    	}
-			        break;	
-			    case "4":
-			    	if($level==1){
-			    		//9g. Send Another User Some Money
-						$response = "CON You can only send 15 shillings.\n";
-						$response .= " Enter a valid phonenumber (like 0722122122)\n";					
-			  			// Print the response onto the page so that our gateway can read it
-			  			header('Content-type: text/plain');
- 			  			echo $response;	
-
-						//Update sessions to level 11
-				    	$sqlLvl11="UPDATE `session_levels` SET `level`=11 where `session_id`='".$sessionId."'";
-				    	$db->query($sqlLvl11);
-
-				    	//B2C
-				    		//Find account
-						$sql10a = "SELECT * FROM account WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
-						$balQuery=$db->query($sql10a);
-						$balAvailable=$balQuery->fetch_assoc();
-
-						if($balAvailable=$balQuery->fetch_assoc()){
-						// Reduce balance
-						$newBal = $balAvailable['balance'];	
-						$newBal -= 15;				
-
-						    if($newBal > 0){					    	
-								$gateway = new AfricasTalkingGateway($username, $apiKey);
-								$productName  = "Nerd Payments"; $currencyCode = "KES";
-								$recipient1   = array("phoneNumber" => $phoneNumber,"currencyCode" => "KES", "amount"=> 15,"metadata"=>array("name"=> "Clerk","reason" => "May Salary"));
-								$recipients  = array($recipient1);
-								try { $responses = $gateway->mobilePaymentB2CRequest($productName,$recipients); }
-								catch(AfricasTalkingGatewayException $e){ echo "Received error response: ".$e->getMessage(); }											    	
-	 			    		}
- 			    	   }
- 			    		
+ 			  			echo $response;
 			    	}
 			        break;
-			    case "5":
-			    	if($level==1){
-				    	//Find account
-						$sql10a = "SELECT * FROM account WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
-						$balQuery=$db->query($sql10a);
-						$balAvailable=$balQuery->fetch_assoc();
 
-						if($balAvailable=$balQuery->fetch_assoc()){
-							// Reduce balance
-							$newBal = $balAvailable['balance'];	
-							$newBal -= 5;				
-
-							if($newBal > 0){
-				    		//9e. Send user airtime
-							$response = "END Please wait while we load your airtime account.\n";
-				  			// Print the response onto the page so that our gateway can read it
-				  			header('Content-type: text/plain');
-	 			  			echo $response;	
-								// Search DB and the Send Airtime
-								$recipients = array( array("phoneNumber"=>"".$phoneNumber."", "amount"=>"KES 5") );
-								//JSON encode
-								$recipientStringFormat = json_encode($recipients);
-								//Create an instance of our gateway class, pass your credentials
-								$gateway = new AfricasTalkingGateway($username, $apikey);    
-								try { $results = $gateway->sendAirtime($recipientStringFormat);}
-								catch(AfricasTalkingGatewayException $e){ echo $e->getMessage(); }
-							} else {
-					    	//Alert user of insufficient funds
-					    	$response = "END Sorry, you dont have sufficient\n";
-					    	$response .= " funds in your account \n";	
-
-				  			// Print the response onto the page so that our gateway can read it
-				  			header('Content-type: text/plain');
-	 			  			echo $response;						    						
-							}
-					    }
- 			    		
-			    	}
-			        break;
-			    case "6":
-			    	if($level==1){
-			    		//9e. Ask how much and Launch the Mpesa Checkout to the user
-						$response = "CON How much are you depositing?\n";
-						$response .= " 4. 15 Shilling.\n";
-						$response .= " 5. 16 Shillings.\n";
-						$response .= " 6. 17 Shillings.\n";							
-
-						//Update sessions to level 12
-				    	$sqlLvl12="UPDATE `session_levels` SET `level`=12 where `session_id`='".$sessionId."'";
-				    	$db->query($sqlLvl12);
-
-			  			// Print the response onto the page so that our gateway can read it
-			  			header('Content-type: text/plain');
- 			  			echo $response;	 			    		
-			    	}
-			        break;	
-			    case "7":
-			    	if($level==1){
-						// Find the user in the db
-						$sql7 = "SELECT * FROM microfinance WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
-						$userQuery=$db->query($sql7);
-						$userAvailable=$userQuery->fetch_assoc();
-
-			    		// Find the account
-						$sql7a = "SELECT * FROM account WHERE phoneNumber LIKE '%".$phoneNumber."%' LIMIT 1";
-						$BalQuery=$db->query($sql7a);
-						$newBal = 0.00; $newLoan = 0.00;
-
-						if($BalAvailable=$BalQuery->fetch_assoc()){
-						$newBal = $BalAvailable['balance'];
-						$newLoan = $BalAvailable['loan'];
-						}
-						//Respond with user Balance
-						$response = "END Your account statement.\n";
-						$response .= "Nerd Microfinance.\n";
-						$response .= "Name: ".$userAvailable['name']."\n";	
-						$response .= "City: ".$userAvailable['city']."\n";	
-						$response .= "Balance: ".$newBal."\n";	
-						$response .= "Loan: ".$newLoan."\n";																													
-			  			// Print the response onto the page so that our gateway can read it
-			  			header('Content-type: text/plain');
- 			  			echo $response;	
-			    	}
-			    break;		        				        				        			        		        
 			    default:
 			    	if($level==1){
 				        // Return user to Main Menu & Demote user's level
@@ -589,7 +456,7 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 			//10a. On receiving a Blank. Advise user to input correctly based on level
 			switch ($level) {
 			    case 0:
-				    //10b. Graduate the user to the next level, so you dont serve them the same menu
+				    //10b. Graduate the user to the next level, so you don't serve them the same menu
 				     $sql10b = "INSERT INTO `session_levels`(`session_id`, `phoneNumber`,`level`) VALUES('".$sessionId."','".$phoneNumber."', 1)";
 				     $db->query($sql10b);
 
@@ -598,7 +465,7 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 				     $db->query($sql10c);
 
 				     //10d. Serve the menu request for name
-				     $response = "CON Please enter your name";
+				     $response = "CON Please enter your Firstname";
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
@@ -607,7 +474,7 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 
 			    case 1:
 			    	//10e. Request again for name - level has not changed...
-        			$response = "CON Name not supposed to be empty. Please enter your name \n";
+        			$response = "CON Name not supposed to be empty. Please enter your firstname \n";
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
@@ -615,22 +482,47 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 			        break;
 
 			    case 2:
-			    	//10f. Request for city again --- level has not changed...
+			    	//10h. Request for lastname again --- level has not changed...
+					$response = "CON Lastname not supposed to be empty. Please reply with your lastname \n";
+
+			  		// Print the response onto the page so that our gateway can read it
+			  		header('Content-type: text/plain');
+ 			  		echo $response;	
+			        break;
+                case 3:
+                    //10h. Request for lastname again --- level has not changed...
+                    $response = "CON ID number not supposed to be empty. Please reply with your ID number \n";
+
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                    echo $response;
+                    break;
+                case 4:
+                    //10h. Request for lastname again --- level has not changed...
+                    $response = "CON Gender number not supposed to be empty. Please reply with your Gender number \n";
+
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                    echo $response;
+                    break;
+				case 5:
+					//10f. Request for city again --- level has not changed...
 					$response = "CON City not supposed to be empty. Please reply with your city \n";
 
-			  		// Print the response onto the page so that our gateway can read it
-			  		header('Content-type: text/plain');
- 			  		echo $response;	
-			        break;
+					// Print the response onto the page so that our gateway can read it
+					header('Content-type: text/plain');
+					echo $response;
+					break;
 
-			    default:
-			    	//10g. End the session
+				default:
+					//10g. End the session
 					$response = "END Apologies, something went wrong... \n";
 
-			  		// Print the response onto the page so that our gateway can read it
-			  		header('Content-type: text/plain');
- 			  		echo $response;	
-			        break;
+					// Print the response onto the page so that our gateway can read it
+					header('Content-type: text/plain');
+					echo $response;
+					break;
+
 			}
 		}else{
 			//11. Update User table based on input to correct level
@@ -645,29 +537,78 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 				     $db->query($sql10c);
 
 				     //10d. Serve the menu request for name
-				     $response = "CON Please enter your name";
+				     $response = "CON Please enter your first name";
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
 				  		echo $response;	
 			    	break;		    
 			    case 1:
-			    	//11b. Update Name, Request for city
+			    	//11b. Update Name, Request for lastname
 			        $sql11b = "UPDATE microfinance SET `name`='".$userResponse."' WHERE `phonenumber` LIKE '%". $phoneNumber ."%'";
 			        $db->query($sql11b);
 
-			        //11c. We graduate the user to the city level
+			        //11c. We graduate the user to the lastname level
 			        $sql11c = "UPDATE `session_levels` SET `level`=2 WHERE `session_id`='".$sessionId."'";
 			        $db->query($sql11c);
 
-			        //We request for the city
-			        $response = "CON Please enter your city";
+			        //We request for the lastname
+			        $response = "CON Please enter your last name";
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
-				  		echo $response;	
+				  		echo $response;
 			    	break;
-			    case 2:
+				case 2:
+					//11b. Update Name, Request for city
+					$sql11b = "UPDATE microfinance SET `lastname`='".$userResponse."' WHERE `phonenumber` LIKE '%". $phoneNumber ."%'";
+					$db->query($sql11b);
+
+					//11c. We graduate the user to the city level
+					$sql11c = "UPDATE `session_levels` SET `level`=3 WHERE `session_id`='".$sessionId."'";
+					$db->query($sql11c);
+
+					//We request for the city
+					$response = "CON Please enter your ID Number";
+
+					// Print the response onto the page so that our gateway can read it
+					header('Content-type: text/plain');
+					echo $response;
+					break;
+                case 3:
+                    //11b. Update Name, Request for city
+                    $sql11b = "UPDATE microfinance SET `id_no`='".$userResponse."' WHERE `phonenumber` LIKE '%". $phoneNumber ."%'";
+                    $db->query($sql11b);
+
+                    //11c. We graduate the user to the city level
+                    $sql11c = "UPDATE `session_levels` SET `level`=4 WHERE `session_id`='".$sessionId."'";
+                    $db->query($sql11c);
+
+                    //We request for the city
+                    $response = "CON Please enter your Gender male or female";
+
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                    echo $response;
+                    break;
+                case 4:
+                    //11b. Update Name, Request for gender
+                    $sql11b = "UPDATE microfinance SET `gender`='".$userResponse."' WHERE `phonenumber` LIKE '%". $phoneNumber ."%'";
+                    $db->query($sql11b);
+
+                    //11c. We graduate the user to the gender level
+                    $sql11c = "UPDATE `session_levels` SET `level`=5 WHERE `session_id`='".$sessionId."'";
+                    $db->query($sql11c);
+
+                    //We request for the city
+                    $response = "CON Please enter your city";
+
+                    // Print the response onto the page so that our gateway can read it
+                    header('Content-type: text/plain');
+                    echo $response;
+                    break;
+
+			    case 5:
 			    	//11d. Update city
 			        $sql11d = "UPDATE microfinance SET `city`='".$userResponse."' WHERE `phonenumber` = '". $phoneNumber ."'";
 			        $db->query($sql11d);
@@ -677,7 +618,7 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 		        	$db->query($sql11e);  
 
 					//11f. Serve the menu request for name
-					$response = "END You have been successfully registered. Dial *384*303# to choose a service.";	        	   	
+					$response = "END You have been successfully registered. Dial *384*456# to choose a service.";
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
@@ -695,4 +636,7 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 		}		
 	} 
 }
+/*hey loise you have to make this shit work,i know its not easy but you have to.Remember this is a new experience and learning will never ends in this world.
+Remember all the things you wanted to achieve in life and make this a stepping stone. Wake up woman and woman up..!
+Rule : nothing is difficult in this life and you got be strond and make things happen*/
 ?>

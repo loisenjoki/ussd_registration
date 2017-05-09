@@ -3,8 +3,8 @@
 //Connection Credentials
 $servername = 'localhost';
 $username = 'root';
-$password = "";
-$database = "ussd";
+$password = "root";
+$database = "yhub";
 $dbport = 3306;
 
 
