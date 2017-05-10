@@ -3,7 +3,7 @@
 if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 	require_once('dbConnector.php');
 	require_once('AfricasTalkingGateway.php');
-	require_once('config.php');
+//	require_once('config.php');
 
 	//2. receive the POST from AT
 	$sessionId     =$_POST['sessionId'];
@@ -442,6 +442,24 @@ if(!empty($_POST) && !empty($_POST['phoneNumber'])){
 
 					//11f. Serve the menu request for name
 					$response = "END You have been successfully registered. Dial *384*456# to choose a service.";
+
+                    /*
+                     * The user is supposed to receive a confirmation sms after registration and its no working
+                     * 8
+                     * 8
+                     * 8
+                     * 8
+                     *
+                     * need help here 
+                     */
+
+                    $code = '20880';
+                    $recipients = $phoneNumber;
+                    $message    = "You have been registered successful to Yhub"."\n".
+                                    "We will be communication to you on new upcoming jobs";
+                    $gateway    = new AfricasTalkingGateway($usernameAT, $apikey);
+                    try { $results = $gateway->sendMessage($recipients, $message, $code); }
+                    catch ( AfricasTalkingGatewayException $e ) {  echo "Encountered an error while sending: ".$e->getMessage(); }
 
 			  		// Print the response onto the page so that our gateway can read it
 			  		header('Content-type: text/plain');
