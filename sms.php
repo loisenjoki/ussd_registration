@@ -1,17 +1,18 @@
 <?php
 // Be sure to include the file you've just downloaded
 require_once('AfricasTalkingGateway.php');
+require_once('dbConnector.php');
 
 // Specify your login credentials
-$username   = "WeloveNerds";
-$apikey     = "990aba1dad3aeefa0be75b70a0c961586f682d72866b5d6d0370e5ddfbffa443";
+$username   = "fixxit2";
+$apikey     = "0a22fcb242bbcd3cd91891a92989277d060ab14a556da768a89c3a1803a994d5";
 
 // Specify the numbers that you want to send to in a comma-separated list
 // Please ensure you include the country code (+254 for Kenya in this case)
-$recipients = "+254787235065";
+$recipients = "+254707022559";
 
 // And of course we want our recipients to know what we really do
-$message    = "It is good to be awake at this time";
+$message    = "You have been registered to yhub as Loise";
 
 // Create a new instance of our awesome gateway class
 $gateway    = new AfricasTalkingGateway($username, $apikey);
